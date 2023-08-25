@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Esteban Vazquez Cardona">
+    <meta name="description" content="The Butterwood Bake Consortium website">
+
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <title>The Butterwood Bake Consortium</title>
+  </head>
+  <body onload="return slideshow()">
+    <!-- For slides to transition automatically -->
+
+    <div id="navbar">
+      <nav>
+        <div class="col-1"></div>
+        <div class="nav-col">
+          <a href="about.html">ABOUT US</a>
+        </div>
+        <div class="nav-col">
+          <a href="occasions.html">SPECIAL OCCASIONS</a>
+        </div>
+        <div id="logo-col" class="nav-col">
+          <a href="index.html"><img src="images/logo.png" alt="logo" id="logo" /></a>
+        </div>
+        <div class="nav-col">
+          <a href="contact.html">CONTACT US</a>
+        </div>
+        <div class="nav-col">
+          <a href="order.html">ORDER</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div id="slideshow" class="col-5">
+          <!-- Code from: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+          <div class="slideshow-container">
+            <!-- Height set to 450 so img isn't huge -->
+            <div class="mySlides fade">
+              <img src="images/cake1w.jpg" height="450">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="images/other5w.jpg" height="450">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="images/cake2w.jpg" height="450">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="weddings" class="row">
+        <div class="col-1"></div>
+        <div class="col-3">
+          <h3>WEDDINGS</h3>
+          <p>Weddings are such a joyous occasion and each one is different! The same is true of our wedding cakes. We have an almost unlimited combination of flavors and styles to choose from.</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <br><br><br>
+          <a href="occasions.html">Learn more</a>
+        </div>
+        <div class="col-3">
+          <img src="images/wedding1.jpg" alt="wedding-cake">
+        </div>
+      </div>
+
+      <div id="celebration" class="row">
+        <div class="col-1"></div>
+        <div class="col-3">
+          <img src="images/cake3.jpg" alt="celebration-cake">
+        </div>
+        <div class="col-3">
+          <h3>CELEBRATIONS</h3>
+          <p>Birthdays, anniversaries, showers, graduations, religious celebrations etc. We have baked special treats for each of life’s special events and can customize them to showcase your theme or ideas. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br><br><br>
+          <a href="occasions.html">Learn more</a>
+        </div>
+      </div>
+
+      <div  id="holiday" class="row">
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+        <div class="col-3">
+          <h3>HOLIDAYS</h3>
+          <p>From Valentine’s Day, Christmas, Thanksgiving, and Mardi Gras, we have cakes for your favorite occasions! Easter is right around the corner. Check out our baked goods that are perfect for your fun, colorful weekend, ranging from Easter themed cookies, cakes, cupcakes, and more.</p>
+          <br><br>
+          <a href="occasions.html">Learn more</a>
+          <img src="images/cake4w.jpg" alt="holiday-cake">
+        </div>
+      </div>
+
+      <div id="news" class="row">
+        <div class="col-1"></div>
+        <div id="news-header" class="col-2">
+          <p>ON THE</p>
+          <p>NEWS</p>
+        </div>
+        <div class="col-2 articles">
+          <p>"Using organic ingredients, Slayden has recently baked fresh strawberry and fromage blanc cake with salted vanilla buttercream; matcha green tea cake with toasted cashew buttercream; and blackberry plum olive oil cobbler."</p><br>
+          <a href="https://archive.triblive.com/news/butterwood-bake-consortium-is-a-real-treat/" target="_blank">Trib Live</a>
+        </div>
+        <div class="col-2 articles">
+          <p>"What’s better than an autumn afternoon spent with a chai? Add some cake, and you’ll realize why you should stop by Lawrenceville’s Butterwood Bake Consortium."</p><br>
+          <a href="https://thepittsburgh100.com/entertainment/food/2018/09/25/pittsburgh-roast-butterwood-bake-consortium" target="_blank">The Pittsburgh 100</a>
+        </div>
+        <div class="col-2 articles">
+          <p>"This spot is hipster hangout meets Victorian style tea parlor and it specializes in lavish layer cakes. The cakes are truly works of art, piled high with multiple layers and extravagant fillings and garnishes."</p><br>
+          <a href="https://www.discovertheburgh.com/bakeries-in-pittsburgh/" target="_blank">Discover the Burgh</a>
+        </div>
+      </div>
+
+      <div id="footer" class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <footer class="row">
+            <div id="contact-button" class="col-2">
+              <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-2"></div>
+            <div id="links" class="col-2">
+              <a href="mailto:info@thebutterwood.com.com" target="_blank"><img src="images/email.png" alt="email" /></a>
+              <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="images/instagram.png" alt="instagram"/></a>
+              <a href="https://www.facebook.com/thebutterwoodbakeconsortium" target="_blank"><img src="images/facebook.png" alt="facebook"/></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <div id="footer2" class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <footer>
+            Copyright All Rights Reserved &copy; 2019 The Butterwood Bake Consortium | All trademarks including and related trade dress are reserved exclusively to The Butterwood Bake Consortium under applicable state law, and the Lanham Act.
+          </footer>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

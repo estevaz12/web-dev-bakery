@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Esteban Vazquez Cardona">
+    <meta name="description" content="The Butterwood Bake Consortium website">
+
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/stylesmobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+    <title>The Butterwood Bake Consortium</title>
+  </head>
+  <body onsubmit="return validate()">
+    <!-- Validates phone number and date -->
+
+    <div id="navbar" class="topnav">
+      <div class="col-1"></div>
+      <div class="nav-col about">
+        <a href="about.html">ABOUT US</a>
+      </div>
+      <div class="nav-col">
+        <a href="occasions.html">SPECIAL OCCASIONS</a>
+      </div>
+      <div id="logo-col" class="nav-col">
+        <a id="logo-a" href="index.html"><img src="images/logo.png" alt="logo" id="logo" /></a>
+      </div>
+      <div class="nav-col">
+        <a href="contact.html">CONTACT US</a>
+      </div>
+      <div class="nav-col">
+        <a href="order.html">ORDER</a>
+      </div>
+    </div>
+
+    <!-- Additional Feature: Custom Online Order Form -->
+
+    <div id="order" class="container">
+
+      <div class="row contact-image">
+        <img src="images/pies.jpg" alt="Picture of bakery">
+      </div>
+
+      <div class="row whole-pies">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <h3>WHOLE PIES</h3>
+          <p>$35-$45</p>
+        </div>
+        <div class="col-3"></div>
+        <div class="col-2 pie-list">
+          <ul>
+            <li>Apple</li>
+            <li>Butternut Squash</li>
+            <li>Mango</li>
+            <li>Cocunut Cream</li>
+            <li>Chocolate Cream</li>
+            <li>Vanilla Custard</li>
+          </ul>
+        </div>
+        <div class="col-2 pie-list">
+          <ul>
+            <li>Pumpkin</li>
+            <li>Sweet Potato</li>
+            <li>Butterscotch</li>
+            <li>Pecan</li>
+            <li>Banana Cream</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Pie ordering form -->
+      <div class="row form">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <h3>ORDER NOW</h3>
+          <p>Please note: We require at least 3 business days notice for cake orders.</p><br>
+          <p>Your order is not official until you have received email or phone confirmation from us.</p><br>
+          <hr><br>
+          <p id="required"><span class="required">*</span> Required</p><br>
+          <br>
+          <!-- All in same row because it's easier to manage -->
+          <form>
+            <label for="name">Name (First and Last)<span class="required">*</span>:  </label>
+            <input type="text" size="25" maxlength="250" placeholder="Butterwood Consortium" required><br>
+            <br>
+            <label for="address">Billing address<span class="required">*</span>:  </label><br><br>
+            <textarea rows="4" cols="20" maxlength="100" placeholder="Your billing address" required></textarea><br>
+            <br>
+            <label for="email">Email:  </label>
+            <input type="email" placeholder="abc@butterwood.com"><br>
+            <br>
+            <label for="phone">Phone #<span class="required">*</span>:  </label>
+            <input id="phone" type="text" size="15" maxlength="10" placeholder="ex. 1234567890" required><br>
+            <br>
+            <label for="quantity">How many pies would you like?<span class="required">*</span>  </label>
+            <select required>
+              <option value="1">1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+            <br><br>
+            <label for="pie-type">Which pie would you like?<span class="required">*</span>  </label>
+            <select required>
+              <option value="- select -">- select -</option>
+              <option>Apple</option>
+              <option>Butternut Squash</option>
+              <option>Mango</option>
+              <option>Cocunut Cream</option>
+              <option>Chocolate Cream</option>
+              <option>Vanilla Custard</option>
+              <option>Pumpkin</option>
+              <option>Sweet Potato</option>
+              <option>Butterscotch</option>
+              <option>Pecan</option>
+              <option>Banana Cream</option>
+            </select>
+            <br><br>
+            <label for="pickup">Pickup date<span class="required">*</span>:  </label>
+            <input type="date" size="20" maxlength="250" placeholder="mm/dd/yyyy" id="date" required><br>
+            <br>
+            <label for="time">Pickup time<span class="required">*</span>:  </label>
+            <input type="time" required><br>
+            <br>
+
+            <input id="submit-button" type="submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="footer" class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <footer class="row">
+            <div id="contact-button" class="col-2">
+              <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-2"></div>
+            <div id="links" class="col-2">
+              <a href="mailto:info@thebutterwood.com" target="_blank"><img src="images/email.png" alt="email" /></a>
+              <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="images/instagram.png" alt="instagram"/></a>
+              <a href="https://www.facebook.com/thebutterwoodbakeconsortium" target="_blank"><img src="images/facebook.png" alt="facebook"/></a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <div id="footer2" class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <footer>
+            Copyright All Rights Reserved &copy; 2019 The Butterwood Bake Consortium | All trademarks including and related trade dress are reserved exclusively to The Butterwood Bake Consortium under applicable state law, and the Lanham Act.
+          </footer>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

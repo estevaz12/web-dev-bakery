@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Esteban Vazquez Cardona">
+    <meta name="description" content="The Butterwood Bake Consortium website">
+
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/stylesmobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <!-- From: https://www.highcharts.com/demo/column-placement -->
+    <script type="text/javascript">
+      $(function (){
+        $("#container-graph").highcharts({
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Popular Times (avg per day)'
+          },
+          xAxis: {
+              categories: ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '9pm', '10pm', '11pm']
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'People'
+              }
+          },
+          legend: {
+              shadow: false
+          },
+          tooltip: {
+              shared: true
+          },
+          plotOptions: {
+              column: {
+                  grouping: false,
+                  shadow: false,
+                  borderWidth: 0
+              }
+          },
+          series: [{
+              name: 'Sat-Sun',
+              color: '#D91E91',
+              data: [30, 33, 50, 48, 25, 28, 27, 24, 46, 66, 73, 70, 0, 0],
+              tooltip: {
+                  valueSuffix: ' people'
+              },
+              pointPadding: 0,
+              pointPlacement: 0
+          }, {
+              name: 'Wed-Fri',
+              color: '#911461',
+              data: [0, 0, 10, 8, 24, 5, 7, 32, 16, 18, 27, 39, 32, 22],
+              tooltip: {
+                  valueSuffix: ' people'
+              },
+              pointPadding: 0,
+              pointPlacement: 0
+          }]
+        });
+      });
+    </script>
+
+    <title>The Butterwood Bake Consortium</title>
+  </head>
+  <body>
+
+    <div id="navbar" class="topnav">
+      <div class="col-1"></div>
+      <div class="nav-col about">
+        <a href="about.html">ABOUT US</a>
+      </div>
+      <div class="nav-col">
+        <a href="occasions.html">SPECIAL OCCASIONS</a>
+      </div>
+      <div id="logo-col" class="nav-col">
+        <a id="logo-a" href="index.html"><img src="images/logo.png" alt="logo" id="logo" /></a>
+      </div>
+      <div class="nav-col">
+        <a href="contact.html">CONTACT US</a>
+      </div>
+      <div class="nav-col">
+        <a href="order.html">ORDER</a>
+      </div>
+      <!-- From: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+      <!-- Only shown when screen is 600px -->
+      <a href="javascript:void(0);" class="icon" onclick="navbar()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div id="contact" class="container">
+
+      <div class="row contact-image">
+        <img src="images/inside1w.jpg" alt="Picture of bakery">
+      </div>
+
+      <!-- Contact info -->
+      <div class="row contact-us">
+        <div class="col-1"></div>
+        <div class="col-2">
+          <h3>FIND US</h3>
+          <table border="0">
+            <tr>
+              <td>Lawrenceville</td>
+            </tr>
+            <tr>
+              <td>5222 Butler St</td>
+            </tr>
+            <tr>
+              <td>Pittsburgh, PA</td>
+            </tr>
+            <tr>
+              <td>15201</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.thebutterwoodbakeconsortium.com" target="_blank">www.thebutterwoodbakeconsortium.com</a></td>
+            </tr>
+          </table>
+          <br>
+          <h3>CONTACT US</h3>
+          <table border="0">
+            <tr>
+              <td>(412)781-0218</td>
+            </tr>
+            <tr>
+              <td><a href="mailto:info@thebutterwood.com" target="_blank">info@thebutterwood.com</a></td>
+            </tr>
+          </table>
+          <br>
+          <div class="col-4 links">
+            <a href="mailto:info@thebutterwood.com" target="_blank"><img src="images/email2.png" alt="email" /></a>
+            <a href="https://www.instagram.com/thebutterwoodbakeconsortium/" target="_blank"><img src="images/instagram.png" alt="instagram"/></a>
+            <a href="https://www.facebook.com/thebutterwoodbakeconsortium" target="_blank"><img src="images/facebook.png" alt="facebook"/></a>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.744913333936!2d-79.9559206847401!3d40.48090797935772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2f80929711b%3A0x169402af50d86e6c!2sThe+Butterwood+Bake+Consortium!5e0!3m2!1sen!2sus!4v1553270936870" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Hours of operation -->
+      <div class="row">
+        <div  class="col-1"></div>
+        <div id="hours" class="col-2">
+          <h3>HOURS</h3>
+          <p>Wednesday – Friday: 12pm - 11pm <br>
+          Saturday: 10am - 11pm <br>
+          Sunday: 10am - 9pm <br></p>
+        </div>
+        <div id="bruh" class="col-1"></div>
+        <div id="graph" class="col-3">
+          <div id="container-graph"></div>
+        </div>
+      </div>
+
+      <!-- Visitor inquiry form -->
+      <div class="row form">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <h3>ASK US</h3>
+          <p>If you would like to inquire about a custom cake not available on our website, please fill this form.</p><br>
+          <hr><br>
+          <p id="required"><span class="required">*</span> Required</p><br>
+          <br>
+          <form action="mailto:infoneeded@butterwoodBC.com" target="_blank">
+            <label for="name">Name<span class="required">*</span>:  </label>
+            <input type="text" size="25" maxlength="250" placeholder="Butterwood Consortium" required><br>
+            <br>
+            <label for="email">Email<span class="required">*</span>:  </label>
+            <input type="email" placeholder="abc@butterwood.com" required><br>
+            <br>
+            <label for="zip">Zip code: </label>
+            <input type="text" size="5" maxlength="5" placeholder="00000"><br>
+            <br>
+            <label for="inquiry">Inquiry<span class="required">*</span>:  </label><br><br>
+            <textarea rows="10" cols="50" maxlength="1000" placeholder="Your inquiry..." required></textarea><br>
+            <br>
+            <label class="updates" for="email-updates">Would you like to subscribe to our newsletter? </label>
+            <input class="checkbox" type="checkbox"><span class="checkmark"></span><label class="updates"> Yes, please!</label><br>
+            <br>
+
+            <input id="submit-button" type="submit">
+          </form>
+        </div>
+      </div>
+
+      <div id="footer2" class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+          <footer>
+            Copyright All Rights Reserved &copy; 2019 The Butterwood Bake Consortium | All trademarks including and related trade dress are reserved exclusively to The Butterwood Bake Consortium under applicable state law, and the Lanham Act.
+          </footer>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

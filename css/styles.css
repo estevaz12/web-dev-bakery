@@ -1,0 +1,712 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+  margin: 20px 0;
+  color: #580c3b;
+}
+
+p, ul, tr {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.6em;
+  letter-spacing: 0.035em;
+}
+
+ul {
+  line-height: 1.5em;
+  padding-left: 20px;
+  font-size: 1em;
+  list-style-type:circle;
+}
+
+.nav-col {
+  width: 16%;
+  float: left;
+  padding: 30px 5px;
+  text-align: center;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+#logo-col {
+  padding: 5px;
+}
+
+/* Code from: https://www.w3schools.com/css/css_rwd_grid.asp */
+#navbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Code from: https://www.w3schools.com/css/css_rwd_grid.asp */
+.col-1 {width: 10%;}
+.col-2 {width: 20%;}
+.col-3 {width: 40%;}
+.col-4 {width: 80%;}
+.col-5 {width: 100%}
+
+/* Code from: https://www.w3schools.com/css/css_rwd_grid.asp */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* Code from: https://www.w3schools.com/css/css_rwd_grid.asp */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Code from: https://www.w3schools.com/css/css_rwd_grid.asp */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#who, #what, #creations {
+  width: 60%;
+}
+
+#navbar {
+  background-color: #FFF;
+  font-family: 'Lato', sans-serif;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: #58290c;
+}
+
+#navbar .nav-col.selected {
+    background: #f6f6f6;
+    color: #bbbbbb;
+}
+
+#navbar .nav-col.selected:hover {
+    background: #f6f6f6;
+    color: #bbbbbb;
+}
+
+#navbar .nav-col:hover {
+  background: #f6f6f6;
+  color: #005A5B;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  height: auto;
+}
+
+/* From: https://www.w3schools.com/howto/howto_js_slideshow.asp */
+#slideshow {
+  padding: 0;
+}
+
+.slideshow-container img {
+  vertical-align: middle;
+  width: 100%;
+  height: 450px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin: auto;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+#weddings {
+  background-color: #580c3b;
+}
+
+#weddings h3 {
+  color: #FFF;
+}
+
+#weddings p {
+  color: #FFF;
+  font-weight: normal;
+}
+
+#weddings img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  float: right;
+}
+
+#weddings a {
+  border: 2.5px solid white;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+  padding: 10px;
+}
+
+#weddings a:hover{
+  background-color: white;
+  color: #580c3b;
+}
+
+#celebration img {
+  width: 65%;
+  height: auto;
+  display: block;
+  float: left;
+}
+
+#celebration {
+  text-align: center;
+  margin: auto;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#celebration h3 {
+  margin-top: 45px;
+  color: #3D8749;
+}
+
+#celebration p {
+  color: #777777;
+}
+
+#celebration a {
+  background-color: #3D8749;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+  padding: 10px;
+}
+
+#celebration a:hover{
+  border: 2.5px solid #3D8749;
+  background-color: white;
+  color: #3D8749;
+}
+
+#holiday {
+  text-align: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+#holiday h3, p, a {
+  position: relative;
+  z-index: 2;
+}
+
+#holiday h3 {
+  color: #580c3b;
+}
+
+#holiday p {
+  color: #58290c;
+}
+
+#holiday img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#holiday a {
+  background-color: #58290c;
+  text-decoration: none;
+  text-align: center;
+  color: #FFF;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+  padding: 10px;
+}
+
+#holiday a:hover{
+  border: 2.5px solid #58290c;
+  background-color: #FFF;
+  color: #58290c;
+}
+
+
+#news {
+  background-color: #f1bb99;
+  padding-bottom: 20px;
+}
+
+#news p {
+  color: #58290c;
+  font-style: italic;
+}
+
+#news-header {
+  transform: rotate(-90deg);
+  font-size: 3em;
+  font-style: italic;
+  position: relative;
+  top: 20px;
+}
+
+#news a {
+  color: #58290c;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.125em;
+}
+
+#news a:hover {
+  color: #3D8749;
+}
+
+#footer {
+  background-color: #911461;
+}
+
+#links img {
+  width: 25%;
+  height: auto;
+  margin: 5px;
+}
+
+#contact-button {
+  margin: 20px 0;
+}
+
+#links {
+  margin-top: 5px;
+}
+
+#contact-button a {
+  border: 2.5px solid white;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+#contact-button a:hover{
+  background-color: white;
+  color: #911461;
+}
+
+#footer2 {
+  background-color: #580c3b;
+  color: #DEDEDA;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.80em;
+}
+
+.who {
+  background-color: #f1bb99;
+}
+
+.who .col-2{
+  text-align: right;
+}
+
+#about h3 {
+  margin: 0;
+  font-size: 2.75em;
+  font-style: italic;
+}
+
+.vid {
+  background-color: #58290c;
+}
+
+.backvid {
+  display: block;
+  width: 100%;
+  height: 450px;
+}
+
+.who h3 {
+  color: #911461;
+}
+
+.who p {
+  color: #58290c;
+  padding-top: 20px;
+}
+
+.what {
+  background-color: #580c3b;
+}
+
+.what p {
+  color: white;
+  padding-top: 10px;
+  font-weight: normal;
+}
+
+.what h3 {
+  color: white;
+}
+
+.creations .col-2 {
+  transform: rotate(-90deg);
+  position: relative;
+  top: 145px;
+}
+
+/* From: https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
+.slides-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides2 {
+  display: none;
+}
+
+.mySlides2 img {
+  width: 100%;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: #222;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+  width: 100%;
+}
+
+.active, .demo:hover {
+  opacity: 1;
+}
+
+.occasions-image img {
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+
+/* From: https://www.w3schools.com/howto/howto_js_accordion.asp */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #FFF;
+  border-bottom: 3px solid #580c3b;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #580c3b;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: auto;
+  transition: max-height 0.4s ease-out;
+}
+
+.accordion:after {
+  content: '˅'; /* Unicode character for "plus" sign (+) */
+  font-size: 25px;
+  color: #580c3b;
+  float: right;
+  margin-left: 5px;
+  font-weight: lighter;
+}
+
+.active:after {
+  content: "˄"; /* Unicode character for "minus" sign (-) */
+}
+
+#accordion {
+  margin: 20px;
+}
+
+#holiday-panel {
+  padding: 15px;
+}
+
+#celebrations-p {
+  text-align: center;
+}
+
+#img-banner .col-2 {
+  width: 25%;
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+#img-banner .col-2 img {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+
+.contact-us {
+  background-color: #580c3b;
+}
+
+.contact-us h3, .contact-us p, .contact-us tr, .contact-us table a {
+  color: white;
+}
+
+.contact-us table a:hover {
+  color: #f1bb99;
+}
+
+.links {
+  padding: 0;
+  margin-top: 10px;
+}
+
+.links img {
+  width: 25%;
+  height: auto;
+  margin: 5px;
+}
+
+iframe {
+  border: 0;
+}
+
+#hours {
+  width: 25%;
+}
+
+#bruh {
+  width: 5%;
+}
+
+#container-graph {
+  min-width: 360px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.form {
+  background-color: #f1bb99;
+}
+
+.form .col-4 {
+  text-align: center;
+}
+
+form {
+  text-align: left;
+  margin-left: 20%;
+}
+
+#required {
+  font-size: 1em;
+}
+
+label, input, textarea, select {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+  margin-right: 5px;
+  font-weight: bold;
+  line-height: 1.6em;
+  letter-spacing: 0.035em;
+  color: #580c3b;
+  font-style: italic;
+}
+
+input, textarea, select {
+  font-weight: lighter;
+  font-style: normal;
+  background-color: #f1bb99;
+  border: none;
+}
+
+select {
+  border-bottom: 3px solid #580c3b;
+}
+
+textarea {
+  border-bottom: 3px solid #580c3b;
+  background-color: #F0D4BB;
+  padding: 10px;
+}
+
+input:hover {
+  border-bottom: 3px solid #580c3b;
+}
+
+textarea:hover {
+  border: 3px solid #580c3b;
+}
+
+select:hover {
+  background-color: #F0D4BB;
+}
+
+::placeholder {
+  color: white;
+}
+
+.updates {
+  font-style: normal;
+}
+
+.required {
+  color: red;
+}
+
+#submit-button {
+  margin: 10px 0 20px 0;
+  border: 2.5px solid #580c3b;
+  text-decoration: none;
+  text-align: center;
+  color: #580c3b;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+#submit-button:hover {
+  background-color: #580c3b;
+  color: white;
+}
+
+hr {
+  border: 1px solid #580c3b;
+}
+
+/* Additional Feature: Custom Online Order Form */
+
+.whole-pies .col-4 {
+  text-align: center;
+}
+
+.pie-list {
+  width: 12%;
+  margin-bottom: 20px;
+}
+
+.pie-list ul {
+  list-style-type: none;
+  padding: 0;
+}
